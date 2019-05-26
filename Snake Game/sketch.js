@@ -3,6 +3,13 @@ var scl = 20;
 var score = 0;
 var food;
 var p;
+var eat;
+var change;
+
+function preload(){
+    eat = loadSound("eat.mp3");
+    change = loadSound("changedir.mp3");
+}
 
 function setup() {
   p = createP("Score:"+score);
@@ -14,27 +21,23 @@ function setup() {
 }
 
 function pickLocation() {
-  var cols = floor(width/scl);
-  var rows = floor(height/scl);
+  var cols = floor(width/scl-1);
+  var rows = floor(height/scl-1);
   food = createVector(floor(random(cols)), floor(random(rows)));
   food.mult(scl);
 }
 
-function mousePressed() {
-  s.total++;
-}
 
 function draw() {
   background(51);
 
   if (s.eat(food)) {
     pickLocation();
+      eat.play();
       score++;
   }
-    if(s.x>=width||s.x<=0||s.y>=height||s.y<=0){
-        score = 0;
-    }
-  s.death();
+    
+  s.death(score);
   s.update();
   s.show();
   p.html("Score:"+score);
@@ -57,4 +60,5 @@ function keyPressed() {
   } else if (keyCode === LEFT_ARROW) {
     s.dir(-1, 0);
   }
+    change.play();
 }
