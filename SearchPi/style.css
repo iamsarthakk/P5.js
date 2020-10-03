@@ -1,0 +1,185 @@
+body {
+
+  background: #16ffbd;
+}
+
+.row .btn{
+  margin: 10px;
+  border-radius: 50%;
+  padding: 16px 24px;
+  background: #16ffbd;
+  border: 2px solid #000;
+  color: #000;
+
+}
+.row .btn {
+  transition-duration: 0.3s;
+}
+
+.row .btn:hover{
+  background-color: #ff8dac;
+}
+.input {
+  /* position: relative;
+  top:65px;
+  left: 120px; */
+  font-size: 32pt;
+  background: transparent;
+  width: 100%;
+
+}
+
+.top p {
+  position: relative;
+  font-size: 32pt;
+  color: #000;
+
+}
+
+ p{
+   margin-top: 20px;
+  font-size: 24pt;
+  text-align: center;
+}
+
+.nav {
+    position: fixed;
+    z-index: 599;
+    text-align: center;
+    top: 50%;
+    margin-top: -75px;
+    width: 150px;
+    height: 150px;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.nav.nav-left .text:hover{
+  color: #ff8dac;;
+}
+.nav.nav-right .text:hover{
+  color: #ff8dac;;
+}
+.nav.nav-left .text {
+    position: absolute;
+    left: -130px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: black;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: 100% 0%;
+    -moz-transform-origin: 100% 0%;
+    -ms-transform-origin: 100% 0%;
+    -o-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+}
+
+.nav .arrow {
+    top: 50%;
+    margin-top: 2px;
+}
+.arrow {
+    position: relative;
+    border-bottom: 1px solid black;
+    width: 50px;
+    height: 1px;
+    display: block;
+    margin-left: 60px;
+}
+
+.arrow:before {
+    content: "";
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    height: 6px;
+    width: 6px;
+    left: 0px;
+    top: -2px;
+}
+.nav.nav-left .arrow {
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+}
+
+.nav.nav-right {
+    right: 0px;
+}
+
+.nav.nav-right .text {
+    color: black;
+    position: absolute;
+    right: -130px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -o-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+}
+
+.arrow.right {
+    margin-right: 60px;
+    margin-left: auto;
+}
+.arrow.right:before {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    left: auto;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+
+.num {
+  color: white;
+}
+
+
+.footer{
+  margin: 0;
+  padding: 0px;
+  position: absolute;
+  bottom: 0;
+  right: 350px;
+  width: 50%;
+  background-color: #000;
+}
+.sprite {
+
+    /* background-image: -webkit-linear-gradient(transparent,transparent),url(./sprite.svg); */
+    background-image: url(./facebook.svg);
+    background-repeat: no-repeat;
+}
+
+.sprite.sprite-social {
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    -webkit-transition-property: none;
+    -moz-transition-property: none;
+    -o-transition-property: none;
+    transition-property: none;
+}
+.sprite.sprite-social.sprite-social-twitter-green {
+    background-position: -54px 0;
+}
